@@ -1,5 +1,7 @@
+require 'rubygems' 
+require 'bundler/setup'
 class Fluorescent
-  attr_reader :columns, :to_filter
+  attr_accessor :columns, :to_filter, :results, :terms, :padding, :formatted_results
   def initialize args
     # number of characters to display before/after search terms
     # example:
