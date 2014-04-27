@@ -1,7 +1,7 @@
 require 'rubygems' 
 require 'bundler/setup'
 class Fluorescent
-  attr_accessor :columns, :to_filter, :results, :terms, :padding, :formatted_results
+  attr_accessor :columns, :to_filter, :results, :terms, :padding, :formatted_results, :id_column
   def initialize args
     # number of characters to display before/after search terms
     # example:
@@ -11,6 +11,7 @@ class Fluorescent
     # padded display: "...t do you think this is a test..." 
     @padding           = 10
     @formatted_results = []
+    @id_column = "id"
     args.each do |k,v|
       instance_variable_set("@#{k}", v) unless v.nil?
     end
@@ -26,16 +27,23 @@ class Fluorescent
         # 2. replace the search terms in the results with bold text
         #    index starting at the first character of the search terms
         #    to the length of the search terms + the padding config value
-      string = r.send(c).to_s
+        string = r.send(c).to_s
         row[c] = highlight string # need to find a better way to do this
         if @to_filter.include? c
-          row[c]   = highlight string[
-            string.index(@terms[0]), 
-            string.index(@terms[0]) + @terms.length + @padding
-          ] << "..."
+          # account for things like one word search terms
+          # or if the padding length is longer than the search term string
+          if @terms.length <= @padding
+            row[c] = highlight @terms
+          else
+            puts string[first_char, first_char + padding_length]
+            row[c]   = highlight string[
+              string.index(@terms[0]), 
+              string.index(@terms[0]) + @terms.length + @padding
+            ] << "..."
+          end
         end
       end
-      @formatted_results.push({:id =>r.id}.merge(row))
+      @formatted_results.push({:id =>r.send(@id_column)}.merge(row))
     end
   end
 
@@ -48,5 +56,4 @@ class Fluorescent
     distill
     @formatted_results
   end
-
 end
