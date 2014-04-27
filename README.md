@@ -47,7 +47,8 @@ Rails:
       end
     end
   end
-
+```
+```erb
   # view
   <h1>Search posts</h1>
   <%= form_tag("/search", method: "get") do %>
