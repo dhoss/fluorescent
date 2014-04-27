@@ -18,8 +18,7 @@ Synopsis
 Rails:
 ------
 
-Inside your search model:
--------------------------
+### Inside your search model:
 ```ruby
   # Perform a search on something
   # I used ActiveRecord + PgSearch
@@ -39,8 +38,7 @@ Inside your search model:
   end 
 ```
 
-Controller
-----------
+### Controller
 ```ruby
   def index
     @results = []
@@ -53,8 +51,7 @@ Controller
     end
   end
 ```
-View:
------
+### View:
 ```erb
 
   <h1>Search posts</h1>
