@@ -35,7 +35,6 @@ class Fluorescent
           if @terms.length <= @padding
             row[c] = highlight @terms
           else
-            puts string[first_char, first_char + padding_length]
             row[c]   = highlight string[
               string.index(@terms[0]), 
               string.index(@terms[0]) + @terms.length + @padding
