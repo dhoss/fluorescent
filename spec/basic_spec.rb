@@ -1,6 +1,8 @@
 require "minitest/autorun"
 require "fluorescent"
 require_relative './mock/results'
+require 'coveralls'
+Coveralls.wear!
 
 describe Fluorescent do
   before do
