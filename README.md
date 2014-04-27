@@ -16,11 +16,13 @@ Synopsis
 ========
 
 Rails:
+------
+
+Inside your search model:
+-------------------------
 ```ruby
   # Perform a search on something
   # I used ActiveRecord + PgSearch
-  
-  # Inside your Search model
 
   class Post < ActiveRecord::Base
 
@@ -35,8 +37,11 @@ Rails:
       :to_filter => [:body]
     )
   end 
+```
 
-  # controller
+Controller
+----------
+```ruby
   def index
     @results = []
     if params[:q]
@@ -48,8 +53,10 @@ Rails:
     end
   end
 ```
+View:
+-----
 ```erb
-  # view
+
   <h1>Search posts</h1>
   <%= form_tag("/search", method: "get") do %>
     <%= label_tag(:q, "Search for:") %>
