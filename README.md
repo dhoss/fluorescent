@@ -9,16 +9,14 @@ Highlight search terms in a result set and distill the text surrounding the sear
 Install
 =======
 
--------------------------
-  gem install fluorescent
--------------------------
 
+  gem install fluorescent
 
 Synopsis
 ========
 
 Rails:
----------
+```ruby
   # Perform a search on something
   # I used ActiveRecord + PgSearch
   
@@ -76,5 +74,5 @@ Rails:
       (No results)
     </div>
   <% end %>
--------------------------------------------
+```
   
