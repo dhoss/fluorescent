@@ -10,7 +10,7 @@ Install
 =======
 
 
-  gem install fluorescent
+```gem install fluorescent
 
 Synopsis
 ========
