@@ -22,6 +22,10 @@ class Fluorescent
   def distill
     @results.each do |r|
       row = {}
+      # make sure we get the rest of the column names in the hash
+      r.column_names.each do |c|
+        row[c] = r.send(c)
+      end
       @columns.each do |c|
         # 1. highlight the search terms
         # 2. replace the search terms in the results with bold text
@@ -42,7 +46,7 @@ class Fluorescent
           end
         end
       end
-      @formatted_results.push({:id =>r.send(@id_column)}.merge(row))
+      @formatted_results.push(row)
     end
   end
 

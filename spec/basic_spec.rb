@@ -2,6 +2,7 @@ require "minitest/autorun"
 require "fluorescent"
 require_relative './mock/results'
 require 'coveralls'
+require 'pp'
 Coveralls.wear!
 
 describe Fluorescent do
@@ -56,4 +57,15 @@ describe Fluorescent do
       end
     end
   end
+
+  describe "when we filter results" do
+    it "matches the original column names" do
+      ["id","name","title","body"].each do |c|
+        @highlighter.formatted_results.each do |r|
+          r.has_key?(c).must_equal true
+        end
+      end
+    end
+  end
+
 end

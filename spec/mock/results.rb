@@ -7,4 +7,8 @@ class Results
     end
   end
 
+  def column_names
+    return ["name", "title", "body", "id"]
+  end
+
 end
