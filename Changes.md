@@ -3,6 +3,7 @@
   * [Fri Feb 6 15:02:59 2015 -0700 - updated to include all columns in AR object, bumped version
 ]
 (http://github.com/dhoss/treeify/commit/0c0f0b2e2a9b10f6cd74bc1c10be026f5e8355d3)
+
 # Version 0.0.1:
 
   * [Sun Apr 27 17:18:25 2014 -0600 - removed fluorescent-0.0.0.gem from git
