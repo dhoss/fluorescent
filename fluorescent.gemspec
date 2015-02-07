@@ -10,4 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    =
     'http://rubygems.org/gems/fluorescent'
   s.license       = 'MIT'
+  s.add_runtime_dependency "activerecord", "~> 4.2"
+  s.add_development_dependency "rake", "10.4.2"
+  s.add_development_dependency "minitest", "5.5.1"
 end
