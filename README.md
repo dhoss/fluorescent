@@ -12,7 +12,7 @@ Example:
 
    search results: "what do you think this is a test"
 
-   padded display: "...t do you think this is a test..." 
+   padded+highlighted display: "...t do you think **this is a test**..." 
 
 
 ## Basic example:
