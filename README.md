@@ -77,9 +77,9 @@ And an example of how to display the results in a view:
   <div class="search-results">
     <% @results.formatter.formatted_results.each do |r| %>
       <div class="blog-post">
-        <div><%= link_to r[:title].html_safe, post_path(r[:id]) %></div>
+        <div><%= link_to r[:title].html_safe, post_path(r['id']) %></div>
         <div class="blog-post-meta">
-          by <%= link_to r[:user][:name], r[:user].id %>
+          by <%= link_to post_url User.find(r['user_id']), r[:user_id] %>
           on <%= r[:published_on] %>
         </div>
         <div class="blog-post-body">
