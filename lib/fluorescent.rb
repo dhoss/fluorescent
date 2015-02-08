@@ -23,7 +23,7 @@ class Fluorescent
     @results.each do |r|
       row = {}
       # make sure we get the rest of the column names in the hash
-      r.column_names.each do |c|
+      r.class.column_names.each do |c|
         row[c] = r.send(c)
       end
       @columns.each do |c|
