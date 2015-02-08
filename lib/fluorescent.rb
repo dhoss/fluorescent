@@ -36,7 +36,7 @@ class Fluorescent
         if @to_filter.include? c
           # account for things like one word search terms
           # or if the padding length is longer than the search term string
-          if @terms.length <= @padding
+          if string.length <= @padding
             row[c] = highlight @terms
           else
             row[c]   = highlight string[

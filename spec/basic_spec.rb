@@ -21,7 +21,7 @@ describe Fluorescent do
         :id    => "123",
         :name  => "toot",
         :title => "tooty mctoot",
-        :body  => "pffffft"
+        :body  => "pffffft toot fart proot"
       )
     ]
     @highlighter = Fluorescent.new(
@@ -51,6 +51,7 @@ describe Fluorescent do
     it "will highlight and pare down the string" do
       terms = @highlighter.terms
       @highlighter.formatted_results.each do |r|
+        p r
         @to_filter.each do |filter|
           r[filter].must_match /<b>\w+<\/b>/
         end
