@@ -1,3 +1,11 @@
+# Version 0.0.5:
+  * [Sun Feb 8 16:26:18 2015 -0700 - bumped version
+](http://github.com/dhoss/treeify/commit/ad20eae19b836ab3afa38738efade2e9662acc37)
+  * [Sun Feb 8 16:25:57 2015 -0700 - removed stupid check for padding vs string length, it's just doing the wrong thing
+](http://github.com/dhoss/treeify/commit/59685ddb884492da74ab623d833dfffc315f657f)
+  * [Sun Feb 8 16:10:36 2015 -0700 - bumped version, updated changelog
+](http://github.com/dhoss/treeify/commit/456a1d9d367496c43cb1d4773fe2b4f2e32ac336)
+
 # Version 0.0.4:
   * [Sun Feb 8 16:06:43 2015 -0700 - fixed filtering
 ](http://github.com/dhoss/treeify/commit/5ab6c6454b074e18382245bcacd2f2dd041c1b52)
