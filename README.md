@@ -6,10 +6,13 @@ fluorescent
 
 Example:
 
-  padding: 10
-  search terms: "this is a test"
-  search results: "what do you think this is a test"
-  padded display: "...t do you think this is a test..." 
+   padding: 10
+
+   search terms: "this is a test"
+
+   search results: "what do you think this is a test"
+
+   padded display: "...t do you think this is a test..." 
 
 
 ## Basic example:
