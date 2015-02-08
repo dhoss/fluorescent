@@ -2,3 +2,7 @@ language: ruby
 rvm:
   - 2.1.0
   - 1.9.3
+before_install:
+  - gem update --system
+  - gem --version # make sure rubygems actually were updated
+env: CODECLIMATE_REPO_TOKEN=192283b1efa9482f0bd0df2434fc3e529821fa650c37f154e698aa9885bdd9d5

@@ -4,6 +4,8 @@ require_relative './mock/results'
 require 'coveralls'
 require 'pp'
 Coveralls.wear!
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
 
 describe Fluorescent do
   before do
