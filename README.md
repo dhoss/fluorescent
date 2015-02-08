@@ -19,7 +19,7 @@ Example:
 
 Here is a search method using [PgSearch](https://github.com/Casecommons/pg_search) to retrieve results in a Rails model:
 
-```
+```ruby
   def self.search(params)
     order_options =  params.has_key?('order_by')     ?
       { params['order_by'] => params['order_type'] } :
@@ -41,7 +41,7 @@ Here is a search method using [PgSearch](https://github.com/Casecommons/pg_searc
 
 The Search::Result listing:
 
-```
+```ruby
   require 'fluorescent'
   module Search
     class Result
@@ -55,7 +55,7 @@ The Search::Result listing:
 ```
 
 An example controller:
-```
+```ruby
 class SearchController < ApplicationController
   def index
     @results = []
@@ -72,7 +72,7 @@ end
 
 And an example of how to display the results in a view:
 
-```
+```html+erb
 <% if @results.formatter.formatted_results.any? && params[:q] %>
   <div class="search-results">
     <% @results.formatter.formatted_results.each do |r| %>
