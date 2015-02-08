@@ -1,3 +1,11 @@
+# Version 0.0.4:
+  * [Sun Feb 8 16:06:43 2015 -0700 - fixed filtering
+](http://github.com/dhoss/treeify/commit/5ab6c6454b074e18382245bcacd2f2dd041c1b52)
+  * [Sun Feb 8 15:33:02 2015 -0700 - updated README
+](http://github.com/dhoss/treeify/commit/a0b76d8f4f71e5b4112d3cb13e68d6209e00f60a)
+  * [Sun Feb 8 13:53:48 2015 -0700 - updated changelog
+](http://github.com/dhoss/treeify/commit/7764c537211d80651136c751d75020cd0ab1eb62)
+
 # Version 0.0.3:
   * [Sun Feb 8 13:51:55 2015 -0700 - updated readme with syntax highlighting
 ](http://github.com/dhoss/treeify/commit/3ead968fcf740de74fb5555be9fdd24a2e9d752b)
