@@ -34,16 +34,10 @@ class Fluorescent
         string = r.send(c).to_s
         row[c] = highlight string # need to find a better way to do this
         if @to_filter.include? c
-          # account for things like one word search terms
-          # or if the padding length is longer than the search term string
-          if string.length <= @padding
-            row[c] = highlight @terms
-          else
-            row[c]   = highlight string[
-              string.index(@terms[0]), 
-              string.index(@terms[0]) + @terms.length + @padding
-            ] << "..."
-          end
+          row[c]   = highlight string[
+            string.index(@terms[0]), 
+            string.index(@terms[0]) + @terms.length + @padding
+          ] << "..."
         end
       end
       @formatted_results.push(row)
