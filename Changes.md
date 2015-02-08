@@ -1,3 +1,41 @@
+# Version 0.0.3:
+  * [Sun Feb 8 13:51:55 2015 -0700 - updated readme with syntax highlighting
+](http://github.com/dhoss/treeify/commit/3ead968fcf740de74fb5555be9fdd24a2e9d752b)
+  * [Sun Feb 8 13:49:26 2015 -0700 - Revert "updated readme with gists"
+This reverts commit 2fd539c2dfff8aa3cbe72c29e5457d91c7a5325b.
+](http://github.com/dhoss/treeify/commit/a794132fbda9998de6dfedc368699b3294880867)
+  * [Sun Feb 8 13:47:03 2015 -0700 - updated readme with gists
+](http://github.com/dhoss/treeify/commit/2fd539c2dfff8aa3cbe72c29e5457d91c7a5325b)
+  * [Sun Feb 8 13:39:57 2015 -0700 - updated readme
+](http://github.com/dhoss/treeify/commit/ef5c09bcd73134aa7825d2ea754b188b679c0764)
+  * [Sun Feb 8 13:38:00 2015 -0700 - removed coveralls from tests
+](http://github.com/dhoss/treeify/commit/d5461384faa184f97cef7e3e1a3950839af38e68)
+  * [Sun Feb 8 13:37:28 2015 -0700 - removed coveralls
+](http://github.com/dhoss/treeify/commit/6e5517d12f86e840811b89971ffef37f1b4e105a)
+  * [Sun Feb 8 13:35:07 2015 -0700 - Added code climate badge
+](http://github.com/dhoss/treeify/commit/db74e5e6495977d08ff9bae895dcd61b4ce3eea1)
+  * [Sun Feb 8 13:33:56 2015 -0700 - updated gemfile and gemspec, bumped version
+](http://github.com/dhoss/treeify/commit/5a1cfb97c060a5f59ced6157d413b1bc8048bb9e)
+  * [Sun Feb 8 13:32:07 2015 -0700 - updated Gemfile
+](http://github.com/dhoss/treeify/commit/433515134eacc821887623f0324930297d94cc93)
+  * [Sun Feb 8 13:30:30 2015 -0700 - added copyright/license
+](http://github.com/dhoss/treeify/commit/85e40476ab9490342a806529eb4b796e16379804)
+  * [Sun Feb 8 13:29:05 2015 -0700 - updated everything for codeclimate
+](http://github.com/dhoss/treeify/commit/dc1d3ec351536e78f8840cbe654f7cfb3a6032bd)
+  * [Sun Feb 8 13:24:50 2015 -0700 - fixed readme formatting
+](http://github.com/dhoss/treeify/commit/9cb08202e00817b56053e26e56c4e79c554a475f)
+  * [Sun Feb 8 13:23:55 2015 -0700 - updated README
+](http://github.com/dhoss/treeify/commit/e3b712b50e0636adecd00037e11eaf0fca049169)
+  * [Sun Feb 8 13:13:31 2015 -0700 - added mocking for activerecord Model.class.column_names()
+](http://github.com/dhoss/treeify/commit/4956de7c0d535daa912d6b5355be73cd6459e5ea)
+  * [Sat Feb 7 13:58:00 2015 -0700 - added runtime dependencies
+](http://github.com/dhoss/treeify/commit/ccff6b5af912956f7756b2cb8c9fefa29a0a8c29)
+  * [Fri Feb 6 15:07:50 2015 -0700 - fixed Changelog formatting
+](http://github.com/dhoss/treeify/commit/4432c7a09e237735029d95a93c7e366fbcfe7591)
+  * [Fri Feb 6 15:07:03 2015 -0700 - Added changelog
+](http://github.com/dhoss/treeify/commit/5b700bca8d955d0206cf1711e4b9e2215ecf3a23)
+  * [Fri Feb 6 15:02:59 2015 -0700 - updated to include all columns in AR object, bumped version
+](http://github.com/dhoss/treeify/commit/0c0f0b2e2a9b10f6cd74bc1c10be026f5e8355d3)
 # Version 0.0.2:
 
   * [Fri Feb 6 15:02:59 2015 -0700 - updated to include all columns in AR object, bumped version
