@@ -1,3 +1,16 @@
+# Version 0.0.6:
+  * [Mon Feb 9 11:22:38 2015 -0700 - updated readme
+](http://github.com/dhoss/treeify/commit/64247241fa24dbd143ff3d9675ba1a6a41f9afec)
+  * [Mon Feb 9 11:20:17 2015 -0700 - bumped version
+](http://github.com/dhoss/treeify/commit/daf54118f213b3013eb7782775d952f7b72af935)
+  * [Mon Feb 9 11:19:45 2015 -0700 - fixed up issues with trying to highlight when terms weren't present
+](http://github.com/dhoss/treeify/commit/89618f821b9433b5f28b923dd910f459e65d00f3)
+  * [Mon Feb 9 10:19:56 2015 -0700 - Revert "removed stupid check for padding vs string length, it's just doing the wrong thing"
+This reverts commit 59685ddb884492da74ab623d833dfffc315f657f.
+](http://github.com/dhoss/treeify/commit/cc412347e9da686aac98e8ed4d314dbd90c460c6)
+  * [Sun Feb 8 16:27:24 2015 -0700 - updated changes
+](http://github.com/dhoss/treeify/commit/7dca1aa7af2b58bacd035c335601985e6e4d1fa9)
+
 # Version 0.0.5:
   * [Sun Feb 8 16:26:18 2015 -0700 - bumped version
 ](http://github.com/dhoss/treeify/commit/ad20eae19b836ab3afa38738efade2e9662acc37)
