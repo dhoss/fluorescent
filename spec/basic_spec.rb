@@ -24,8 +24,30 @@ describe Fluorescent do
         :body  => "pffffft toot fart proot"
       )
     ]
+
+    @results2 = [
+      Results.new(
+        :id    => "1234",
+        :name  => "fart",
+        :title => "farty mcfart",
+        :body  => "the word you are searching for doesn't exist here"
+      ),
+      Results.new(
+        :id    => "123",
+        :name  => "toot",
+        :title => "tooty mctoot",
+        :body  => "pffffft toot fart proot"
+      )
+    ]
     @highlighter = Fluorescent.new(
       :results   => @results,
+      :terms     => @search_terms,
+      :columns   => @columns,
+      :to_filter => @to_filter
+    )
+    
+    @highlighter2 = Fluorescent.new(
+      :results   => @results2,
       :terms     => @search_terms,
       :columns   => @columns,
       :to_filter => @to_filter
@@ -51,7 +73,6 @@ describe Fluorescent do
     it "will highlight and pare down the string" do
       terms = @highlighter.terms
       @highlighter.formatted_results.each do |r|
-        p r
         @to_filter.each do |filter|
           r[filter].must_match /<b>\w+<\/b>/
         end
@@ -61,11 +82,15 @@ describe Fluorescent do
 
   describe "when we filter results" do
     it "matches the original column names" do
-      ["id","name","title","body"].each do |c|
+      [:id,:name,:title,:body].each do |c|
         @highlighter.formatted_results.each do |r|
           r.has_key?(c).must_equal true
         end
       end
+    end
+
+    it "ensures we don't die if nothing matches" do
+      @highlighter2.formatted_results.wont_be_nil
     end
   end
 

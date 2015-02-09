@@ -17,15 +17,21 @@ class Fluorescent
     end
   end
 
+  def column_names_to_h r
+    row = {}
+    # make sure we get the rest of the column names in the hash
+    r.class.column_names.each do |c|
+      row[c] = r.send(c)
+    end
+    row
+  end
+
   # distill search result down to n characters before and after
   # search terms
   def distill
     @results.each do |r|
-      row = {}
-      # make sure we get the rest of the column names in the hash
-      r.class.column_names.each do |c|
-        row[c] = r.send(c)
-      end
+      row = column_names_to_h(r)
+      
       @columns.each do |c|
         # 1. highlight the search terms
         # 2. replace the search terms in the results with bold text
@@ -34,20 +40,23 @@ class Fluorescent
         string = r.send(c).to_s
         row[c] = highlight string # need to find a better way to do this
         if @to_filter.include? c
-          # account for things like one word search terms
-          # or if the padding length is longer than the search term string
-          if string.length <= @padding
-            row[c] = highlight @terms
-          else
+          # if nothing matches, we don't want to try to highlight
+          if string.index(@terms[0]) != nil
             row[c]   = highlight string[
               string.index(@terms[0]), 
-              string.index(@terms[0]) + @terms.length + @padding
+              string.index(@terms[0]) + string.length + @padding
             ] << "..."
           end
         end
       end
-      @formatted_results.push(row)
+
+      # symbolize hash keys
+      @formatted_results.push(symbolize_keys(row))
     end
+  end
+
+  def symbolize_keys row
+    row.inject({}){|memo,(k,v)| memo[k.to_sym] = v; memo}
   end
 
   # highlight the search terms in the result
