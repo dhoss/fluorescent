@@ -73,13 +73,14 @@ end
 And an example of how to display the results in a view:
 
 ```html+erb
-<% if @results.formatter.formatted_results.any? && params[:q] %>
+<% if params[:q] %>
+  <% if @results.formatter.formatted_results.any? %>
   <div class="search-results">
     <% @results.formatter.formatted_results.each do |r| %>
       <div class="blog-post">
-        <div><%= link_to r[:title].html_safe, post_path(r['id']) %></div>
+        <div><%= link_to r[:title].html_safe, post_path(r[:id]) %></div>
         <div class="blog-post-meta">
-          by <%= link_to post_url User.find(r['user_id']), r[:user_id] %>
+          by <%= link_to post_url User.find(r[:user_id]), r[:user_id] %>
           on <%= r[:published_on] %>
         </div>
         <div class="blog-post-body">
@@ -89,7 +90,7 @@ And an example of how to display the results in a view:
       <hr />
     <% end %>
   </div>
-  <% elsif !@results.formatter.formatted_results.any? && params[:q] %>
+  <% elsif !@results.formatter.formatted_results.any? %>
   <div class="search-result">
     (No results)
   </div>
