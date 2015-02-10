@@ -1,4 +1,7 @@
 # Version 0.0.6:
+  * [Mon Feb 9 11:23:45 2015 -0700 - updated changes
+](http://github.com/dhoss/treeify/commit/c12379ec89c8a2b2a8b75453cb64c695df9247a7)
+# Version 0.0.6:
   * [Mon Feb 9 11:22:38 2015 -0700 - updated readme
 ](http://github.com/dhoss/treeify/commit/64247241fa24dbd143ff3d9675ba1a6a41f9afec)
   * [Mon Feb 9 11:20:17 2015 -0700 - bumped version
