@@ -41,11 +41,13 @@ class Fluorescent
         row[c] = highlight string # need to find a better way to do this
         if @to_filter.include? c
           # if nothing matches, we don't want to try to highlight
-          if string.index(@terms[0]) != nil
+          if string.index(@terms) != nil
             row[c]   = highlight string[
               string.index(@terms[0]), 
-              string.index(@terms[0]) + string.length + @padding
+              string.index(@terms[0]) + @terms.length + @padding
             ] << "..."
+          else
+            row[c] =  string[0, @terms.length + @padding] << "..."
           end
         end
       end
