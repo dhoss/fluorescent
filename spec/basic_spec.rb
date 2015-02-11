@@ -1,9 +1,10 @@
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
 require "minitest/autorun"
 require "fluorescent"
 require_relative './mock/results'
 require 'pp'
-require "codeclimate-test-reporter"
-CodeClimate::TestReporter.start
+
 
 describe Fluorescent do
   before do
